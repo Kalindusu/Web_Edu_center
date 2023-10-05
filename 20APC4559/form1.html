@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<head>
+<title>Form</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.back{
+	 
+    background-image:url(' https://media.istockphoto.com/id/1354280041/vector/frame-golden-art-abstract-soft-blurry-abstract-background.jpg?s=612x612&w=0&k=20&c=H35KxW7ydpXMMKwCOrToj5yajoezVVti94vOXdaIh4I=');
+	
+	background-repeat:no-repeat;
+	width:100%;
+	height:auto;
+	width:100%;
+	margin-left:0px;
+	background-size:cover;
+	
+}
+.ali{
+text-align:center;
+}
+.sub{
+	background-color:red;
+	color:white;
+	width:200px;
+	margin-left:70px;
+	border:none;
+	height:30px;
+	cursor:pointer;
+border-radius:5px;
+border:5px;red;solid;	
+}
+.reme{
+	margin-left:100px;
+}
+.form input[type="text"],.form input[type="email"],.form input[type="password"],.form input[type="file"],.form input[type="date"],.form input[type="number"]{
+	display:block;
+	width:40%;
+}
+.form{
+	margin-left:100px;
+	padding-top:50px;
+	padding-left:500px;	
+}
+.sub:hover{
+	
+	color:red;
+	background-color:white;
+	border:thin;red;solid;
+	
+}
+.head{
+padding-top:50px;
+}
+.home{
+position:fixed;
+float:right;
+color:white;
+background-color:#00c04b;
+margin:50px;
+cursor:pointer;
+width:100px;
+height:40px;
+border-radius:2px;
+outline:none;
+border:none;
+
+}
+.home:hover{
+color:#00c04b;
+background-color:white;
+}
+</style>
+</head>
+
+<body ><div class="back">
+<a href="htmlfile.html"><input type="button" name="button" value="HOME" class="home"/></a>
+<div class="head"><center><span style="color:#152238;"> <h1>  Course Application</h1></span></center></div>
+<div class="form"><form type="eg01.html" method="get" id="personalDetailsForm">
+<b><strong>Name:</b></strong> <input type="text" name="name" placeholder="Enter Your Full Name" class="ali" required><br/><br/>
+<b><strong>Date Of Birth:</b></strong> <input type="date" name="date of birth" class="ali" required /><br/><br/>
+<b><strong>Country:</b></strong> <input type="text" name="name" placeholder="Enter Your Country" class="ali"><br/><br/>
+<b><strong>City:</b></strong> <input type="text" name="name" placeholder="Enter Your City" class="ali"><br/><br/>
+<b><strong>City Code:</b></strong> <input type="number" name="number" /><br/><br/>
+<b><strong>Gender:</b></strong><br/>Male:-  <input type="radio" name="gender" value="male"/> Female:-  <input type="radio" name="gender" value="female"/><br/><br/><br/>
+<b><strong>Current Education Level:</b></strong><br/><select name="education" required ><br/><br/><br/>
+       <option value="Foundation">GCA O/L</option>
+	   <option value="Level I">GCA A/L</option>
+	   <option value="Level II">Undergraduate</option>
+	   <option value="Advanced">Graduate Studies</option>
+	   </select><br/><br/>
+	   
+	  
+
+<b><strong>Email:</b></strong><input type="email" name="email" placeholder="Enter Your Email" class="ali" required><br/><br/>
+<b><strong>Select Your Course:</b></strong><br/><select name="Course" ><br/><br/>
+       <option value="Foundation">Degrees</option>
+	   <option value="Level I">Diploma</option>
+	  
+	   </select><br/><br/>
+	   
+	    <b><strong> Select Your  Digree Programme:</b></strong><br/><select name="education"  ><br/><br/><br/>
+       <option value="Foundation">Bachelor of Science Honours Degree in Artificial Intelligence</option>
+	   <option value="Level I">Bachelor of Science Honours Degree in Business Information Systems </option>
+	   <option value="Level II">Bachelor of Science Honours Degree in Cybersecurity </option>
+	   <option value="Advanced">Bachelor of Science Honours Degree in Data Science</option>
+	   </select><br/><br/>
+<b><strong>New Password:</b></strong><input type="password" name="paasword" placeholder="Create a strong password" class="ali" required><br/><br/>
+<b><strong>Confirm your  Password:</b></strong><input type="password" name="paasword" required ><br/><br/>
+<b><strong>Attach your photo here:</b></strong><input type="file" name="image" required><br/><br/>
+<input type="checkbox" name="checkbox" value="Remember me" class="reme"> <b><strong>This informations are correct</b></strong><br/><br/><br/>
+<button type="submit" class="sub"> REGISTER NOW  </button></a>
+</form>
+
+</div>
+</div>
+
+<script>
+        // JavaScript to handle form submission
+        document.getElementById('personalDetailsForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // You can now send the 'data' object to a server or perform other actions as needed.
+            console.log(data);
+            alert('Personal details saved successfully!');
+        });
+    </script>
+	
+	</body>
+</html>
+
